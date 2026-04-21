@@ -1,0 +1,53 @@
+Wie bei allen Data-Science-Projekten führen mehrere Wege zum Ziel. Daher solltest du den folgenden Code nicht als feste Musterlösung betrachten, sondern eher als Inspiration oder Stütze für zukünftige Projekte.
+
+Zunächst fangen wir mit dem Importieren der Bibliotheken an. Hierbei handelt es sich um Standardbibliotheken, die wir bei fast jedem Data-Science-Projekt benötigen. Wir beginnen mit numpy für grundlegende mathematische Funktionalitäten und mit matplotlib zur Visualisierung unserer Daten und Analysen. Anschließend kommen pandas für die Datenverarbeitung und scipy für das Aufsetzen eines Machine-Learning-Algorithmus zum Einsatz.
+
+
+
+Dann bereiten wir die Daten für unsere einfache Analyse vor:
+
+
+
+Wir lesen die Daten als Dataframe ein und wandeln die gewünschten Spalten in Listen um. Dann visualisieren wir die Daten mit einem Stylesheet:
+
+
+
+Als Nächstes kommt die Reinigung. Hierbei halten wir es einfach und löschen Zeilen, die eine leere Zelle enthalten, und Duplikate. Natürlich kann man hier auch noch tiefer graben und nach Ausreißern suchen. Für eine grobe Erstanalyse reicht diese grundlegende Reinigung schon mal.
+
+Nun fangen wir mit der Analyse an, beginnend mit einer einfachen linearen Regression. Diese implementieren wir mit Hilfe der scipy-Bibliothek. Wir visualisieren den Prozess und lassen uns den Korrelationskoeffizienten ausgeben:
+
+
+
+Nun können wir eine Polynom-Regression für verschiedene Grade durchführen und uns die Ergebnisse in einem Plot anschauen:
+
+
+
+Anhand des Plots kann man dann schon mal abschätzen, ob die lineare Regression verbessert werden konnte. Um nun den optimalen Polynom-Grad herauszufinden, führen wir eine k-fache Kreuzvalidierung durch:
+
+
+
+
+
+
+
+Damit haben wir den optimalen Grad des Polynoms bestimmt. Visualisieren wir nun alles:
+
+
+
+
+
+
+
+Der Modus beim Level ist: 1
+Der Modus beim Gehalt ist: 45000
+Der Median des Gehalts ist: 68264.5
+Das durchschnittliche Gehalt ist: 181311.35
+Die Standardabweichung des Gehalts liegt bei: 271141.3876850861
+Die Korrelation zwischen den Variablen ist: 0.8120326486505128
+Der Korrelationskoeffizient ist: 0.798498771173005
+Gesamter MQF Grad 1 388940832297.37854
+Gesamter MQF Grad 2 107956865301.3169
+Gesamter MQF Grad 3 70986360881.49022
+Gesamter MQF Grad 4 72535784350.40025
+Minimaler MQF: 70986360881.49022
+Optimales Modell: 3
